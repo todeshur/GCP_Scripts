@@ -6,5 +6,5 @@ buckets=$(gsutil ls -b | awk '{print $1}')
 # Iterate over buckets and print human-readable size
 for bucket in $buckets; do
   size=$(gsutil du -sh "$bucket")
-  echo "$bucket: $size"
+  echo "$size"
 done
